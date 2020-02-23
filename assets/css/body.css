@@ -1,0 +1,57 @@
+body {
+  color: #333333;
+  display: grid;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  grid-template-areas:
+    'header'
+    'main'
+    'footer'
+  ;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto auto;
+}
+
+body > header {
+  grid-area: header;
+}
+
+body > header nav ul,
+body > header nav ul li {
+  display: flex;
+}
+
+body > header nav ul li a {
+  border-bottom: 3px solid transparent;
+  color: inherit;
+  padding: 1rem 1.5rem;
+  transition: ease all .3s;
+}
+
+.active,
+body > header nav ul li a:hover {
+  border-color: #2e82ff;
+  color: #2e82ff;
+}
+ 
+main {
+  grid-area: main;
+}
+
+body > footer {
+  background-color: #d2d2d2;
+  color: #6a6a6a;
+  font-weight: 600;
+  grid-area: footer;
+  padding: .65rem;
+  text-align: center;
+}
+
+body section:last-child {
+  padding-bottom: 4rem;
+}
+
+@media (width <= 575px) {
+  html {
+    font-size: 14px;
+  }
+}
